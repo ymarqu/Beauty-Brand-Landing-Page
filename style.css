@@ -1,7 +1,37 @@
 html{
+    /* background-color: #F6E1CE; */
     box-sizing: border-box;
+    background: url('paulas_choice.jpeg') no-repeat center center fixed;
+    background-size: cover;
 }
+
 body{
     margin: 0;
-    min-height: 100vh;
+    min-height: 90vh;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    padding: 2rem 8%;
+    font-weight: 700;
+}
+h1{
+    font-weight: 700;
+    font-size: 5rem;
+}
+p{
+    font-size: 2rem;
+}
+.btn{
+    padding: 1rem 2rem;
+    background-color: #C89595;
+    border: none;
+    font-weight: 700;
+}
+.color-text{
+    color: #C89595
+}
+.landing-container{
+    height: 80vh;
 }
