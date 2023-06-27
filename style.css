@@ -36,22 +36,111 @@ p{
     height: 80vh;
 
 }
-.img-container{
-    /* background: url('paulas_choice.jpeg') no-repeat center/contain;
-    background-size: cover; */
-    /* width: 100%; */
-    height: 100%;
+/* SOLGAN CONTAINER */
+.solgan-container{
+    height: 50vh;
+    background-color: #F9F5F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.picture-container{
-    background-color: #F6E1CE;
-}
-.solgan-text{
+.header-text{
+    font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 3rem;
-    margin-top: 50%;
-    transform: translateY(-50%);
+    color: #C89595
 }
-.col > img{
+
+/* SOLGAN CONTAINER END */
+
+/* PICTURE GRID CONTAINER */
+.project-grid{
+    margin: auto auto;
+    width: 100%;
+    max-width: 2000px;
+    --grid-layout-gap: 20px;
+    --grid-column-count: 4;
+    --grid-item--min-width: 350px;
+    /* Calculated values. */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
+    padding: 5%;
+}
+.box > img{
     width: 100%;
     height: 100%;
+    justify-self: stretch;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+.middle{
+    transition: 0.3s ease-in-out;
+    /* opacity: 0; */
+    background-color: aqua;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.box:hover img{
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+.box:hover .middle{
+    opacity: 1;
+}
+
+/* .middle:hover{
+    opacity: 1;
+}
+img:hover{
+    transform: scale(1.1);
+    opacity: 0.3;
+} */
+.hover-text{
+    background-color: aqua;
+    color: #000;
+    font-size: 1rem;
+
+}
+/* PICTURE GRID CONTAINER END */
+
+/* EMAIL CONTAINER */
+
+.email-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #F9F5F6;
+}
+.email-text{
+    width: 50%;
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+}
+.email-btn{
+    color: #F9F5F6;
+}
+/* EMAIL CONTAINER END */
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 1rem;
+}
+footer > p{
+ font-size: 0.7rem;
+ color: #C89595;
+}
+
+/* FOOTER END */
