@@ -43,6 +43,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .header-text{
     font-family: 'Fraunces', serif;
@@ -59,7 +60,7 @@ p{
     width: 100%;
     max-width: 2000px;
     --grid-layout-gap: 20px;
-    --grid-column-count: 4;
+    --grid-column-count: 3;
     --grid-item--min-width: 350px;
     /* Calculated values. */
     --gap-count: calc(var(--grid-column-count) - 1);
@@ -77,38 +78,62 @@ p{
     object-fit: cover;
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
 }
-
+.box{
+    position: relative;
+}
 .middle{
     transition: 0.3s ease-in-out;
-    /* opacity: 0; */
-    background-color: aqua;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F9F5F6;
 }
+
 .box:hover img{
     transform: scale(1.1);
+    z-index: 1;
     opacity: 0.3;
 }
 .box:hover .middle{
     opacity: 1;
 }
+.point{
+    color: #C89595;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    opacity: 1;
+}
 
 /* .middle:hover{
     opacity: 1;
-}
+    /* z-index: 1;
+} */
 img:hover{
     transform: scale(1.1);
     opacity: 0.3;
-} */
+}
 .hover-text{
-    background-color: aqua;
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: 700; */
+    /* font-family: Rob; */
+    font-size: 1.5rem;
     color: #000;
-    font-size: 1rem;
+    /* font-size: 2rem; */
+    width: 90%
 
+}
+.hover-text:hover{
+    z-index: 1;
+    opacity: 1;
 }
 /* PICTURE GRID CONTAINER END */
 
