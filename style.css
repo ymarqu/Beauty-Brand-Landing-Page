@@ -1,8 +1,7 @@
 html{
     background-color: #F6E1CE;
     box-sizing: border-box;
-    /* background: url('paulas_choice.jpeg') no-repeat center center fixed;
-    background-size: cover; */
+
 }
 
 body{
@@ -15,13 +14,17 @@ body{
 .navbar{
     padding: 2rem 8%;
     font-weight: 700;
+    background-color: transparent;
+    background: linear-gradient(to right,#F6E1CE 50%, #AD9FF7 50%);
 }
 h1{
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4rem;
+    width: 80%;
 }
 p{
-    font-size: 2rem;
+    font-size: 1.3rem;
+    width: 80%;
 }
 .btn{
     padding: 1rem 2rem;
@@ -33,8 +36,39 @@ p{
     color: #C89595
 }
 .landing-container{
-    height: 80vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.img-container{
+    width: 50%;
+    height: 100%;
+    background-color: #AD9FF7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container > img{
+    height: 100%;
+    width: 80%;
+}
 
+.link{
+    color: #FFFF;
+    transition: all 0.3s ease-in-out;
+}
+.link:hover{
+    transform: scale(1.1);
+    color: #F9F5F6;
 }
 /* SOLGAN CONTAINER */
 .solgan-container{
@@ -97,7 +131,7 @@ p{
     background-color: #F9F5F6;
 }
 
-.box:hover img{
+.box:hover > img{
     transform: scale(1.1);
     z-index: 1;
     opacity: 0.3;
@@ -106,7 +140,7 @@ p{
     opacity: 1;
 }
 .point{
-    color: #C89595;
+    color: #AD9FF7;
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 2rem;
@@ -117,10 +151,10 @@ p{
     opacity: 1;
     /* z-index: 1;
 } */
-img:hover{
+/* img:hover{
     transform: scale(1.1);
     opacity: 0.3;
-}
+} */
 .hover-text{
     font-family: 'Roboto', sans-serif;
     /*font-weight: 700; */
@@ -164,8 +198,26 @@ footer{
     padding: 1rem;
 }
 footer > p{
+    width: 100%;
  font-size: 0.7rem;
  color: #C89595;
 }
 
 /* FOOTER END */
+
+@media screen and (max-width: 991px) {
+    .img-container{
+        display: none;
+    }
+    .navbar{
+        background: #F6E1CE;
+    }
+    .landing-text-container{
+        text-align: center;
+        width: 80%;
+
+    }
+    .landing-text-container > btn{
+
+    }
+}
